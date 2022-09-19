@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFunciones.js"></script>
+    <script type="text/javascript" src="js/funcionesCliente.js"></script>
+    <script type="text/javascript" src="js/funcionesMessage.js"></script>
+    <title>MinTic</title>
+</head>
+
+<body>
+    <h1> SKATE</h1>
+
+    <div>
+        <input type="number" id="id" placeholder="Id">
+        <input type="text" id="brand" placeholder="Brand">
+        <input type="number" id="model" placeholder="Model">
+        <input type="number" id="category_id" placeholder="Category">
+        <input type="text" id="name" placeholder="Name">
+    </div>
+    <div>
+        <button onclick="guardarInformacion()">Guardar</button>
+        <button onclick="editarInformacion()">Actualizar</button>
+        <button onclick="traerInformacion()">Consultar</button>
+        <div id="resultado"> </div>
+    </div>
+
+
+    <H1>CLIENT</H1>
+    <div>
+        <input type="number" id="idCliente" placeholder="Id">
+        <input type="text" id="nameCliente" placeholder="Name">
+        <input type="text" id="emailCliente" placeholder="Email">
+        <input type="number" id="ageCliente" placeholder="Age">
+    </div>
+    <div>
+        <button onclick="guardarInformacionCliente()">Guardar</button>
+        <button onclick="editarInformacionCliente()">Actualizar</button>
+        <button onclick="traerInformacionCliente()">Consultar</button>
+        <div id="resultadoCliente"> </div>
+    </div>
+
+    <H1>MENSSAGE</H1>
+    <div>
+        <input type="number" id="idMessage" placeholder="Id">
+        <input type="text" id="messagetext" placeholder="Message">
+    </div>
+    <div>
+        <button onclick="guardarInformacionMessage()">Guardar</button>
+        <button onclick="editarInformacionMessage()">Actualizar</button>
+        <button onclick="traerInformacionMessage()">Consultar</button>
+        <div id="resultadoMessage"> </div>
+
+    </div>
+</body>
+
+</html>
