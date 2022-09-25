@@ -4,9 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 //import javax.persistence.JoinColumn;
 //import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 //import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -17,43 +21,53 @@ public class Patineta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String name;
-    private Integer yearb;
-    private String description;
-    private Integer category_id;
+    private String Nombre;
+    private Integer Año;
+    private String Descripcion;
+   // private Integer Categoria_id;
+
+    @ManyToOne 
+    @JoinColumn(name="CategoriaId")
+    @JsonIgnoreProperties({"patineta"}) 
+    private Categoria Categoria_id;
+
     public Integer getId() {
         return id;
     }
     public void setId(Integer id) {
         this.id = id;
     }
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return Nombre;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setNombre(String nombre) {
+        Nombre = nombre;
     }
-    public Integer getYearb() {
-        return yearb;
+    public Integer getAño() {
+        return Año;
     }
-    public void setYearb(Integer yearb) {
-        this.yearb = yearb;
+    public void setAño(Integer año) {
+        Año = año;
     }
-    public String getDescription() {
-        return description;
+    public String getDescripcion() {
+        return Descripcion;
     }
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescripcion(String descripcion) {
+        Descripcion = descripcion;
     }
-    public Integer getCategory_id() {
-        return category_id;
+    public Categoria getCategoria_id() {
+        return Categoria_id;
     }
-    public void setCategory_id(Integer category_id) {
-        this.category_id = category_id;
+    public void setCategoria_id(Categoria categoria_id) {
+        Categoria_id = categoria_id;
     }
 
-    // @ManyToOne
-    // @JoinColumn(name="CategoriaId")
-    // @JsonIgnoreProperties({"patineta"})
-
+    //public Integer getCategoria_id() {
+    //    return Categoria_id;
+   // }
+   // public void setCategoria_id(Integer categoria_id) {
+   //     Categoria_id = categoria_id;
+   // }
+   
+    
 }
