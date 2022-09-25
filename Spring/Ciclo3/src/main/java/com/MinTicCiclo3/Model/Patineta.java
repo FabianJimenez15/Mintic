@@ -6,13 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-//import javax.persistence.JoinColumn;
-//import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "patineta")
@@ -24,50 +19,58 @@ public class Patineta {
     private String Nombre;
     private Integer Año;
     private String Descripcion;
-   // private Integer Categoria_id;
+    // private Integer Categoria_id;
 
-    @ManyToOne 
-    @JoinColumn(name="CategoriaId")
-    @JsonIgnoreProperties({"patineta"}) 
-    private Categoria Categoria_id;
+    @ManyToOne
+    @JoinColumn(name = "categoriaId")
+    @JsonIgnoreProperties({ "patineta" })
+    private Categoria categoria;
 
     public Integer getId() {
         return id;
     }
+
     public void setId(Integer id) {
         this.id = id;
     }
+
     public String getNombre() {
         return Nombre;
     }
+
     public void setNombre(String nombre) {
         Nombre = nombre;
     }
+
     public Integer getAño() {
         return Año;
     }
+
     public void setAño(Integer año) {
         Año = año;
     }
+
     public String getDescripcion() {
         return Descripcion;
     }
+
     public void setDescripcion(String descripcion) {
         Descripcion = descripcion;
     }
-    public Categoria getCategoria_id() {
-        return Categoria_id;
-    }
-    public void setCategoria_id(Categoria categoria_id) {
-        Categoria_id = categoria_id;
+
+    public Categoria getCategoria() {
+        return categoria;
     }
 
-    //public Integer getCategoria_id() {
-    //    return Categoria_id;
-   // }
-   // public void setCategoria_id(Integer categoria_id) {
-   //     Categoria_id = categoria_id;
-   // }
-   
-    
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    // public Integer getCategoria_id() {
+    // return Categoria_id;
+    // }
+    // public void setCategoria_id(Integer categoria_id) {
+    // Categoria_id = categoria_id;
+    // }
+
 }

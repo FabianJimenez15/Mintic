@@ -1,10 +1,10 @@
 package com.MinTicCiclo3;
 
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-
+@EntityScan(basePackages = { "com.MinTicCiclo3.model" })
 @SpringBootApplication
 public class Ciclo3Application {
 

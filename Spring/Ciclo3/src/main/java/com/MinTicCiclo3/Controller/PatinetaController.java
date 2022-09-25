@@ -18,28 +18,36 @@ import org.springframework.http.HttpStatus;
 import com.MinTicCiclo3.Model.Patineta;
 import com.MinTicCiclo3.Service.PatinetaService;
 
-
 @RestController
 @RequestMapping("/api/patineta")
-@CrossOrigin(origins = "*", methods = {RequestMethod.GET,  RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
+@CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT,
+        RequestMethod.DELETE })
 public class PatinetaController {
 
     @Autowired
     private PatinetaService patinetaService;
+
     @GetMapping("/patinetaCompleta")
-    public List<Patineta> obtenerPatinetaCompleta(){
+    public List<Patineta> obtenerPatinetaCompleta() {
         return patinetaService.obtenerPatinetaCompleta();
     }
+
     @GetMapping("/{id}")
-    public Optional<Patineta> obtenerPatinetaId(@PathVariable("id") Integer identificador){
+    public Optional<Patineta> obtenerPatinetaId(@PathVariable("id") Integer identificador) {
         return patinetaService.obtenerPatinetaId(identificador);
     }
+
     @PostMapping("salvarpatineta")
     @ResponseStatus(HttpStatus.CREATED)
-    public Patineta salvarPatineta(@RequestBody Patineta patineta){
+    public Patineta salvarPatineta(@RequestBody Patineta patineta) {
         return patinetaService.salvarPatineta(patineta);
 
     }
 
+    // Consultas personalizadas
+    @GetMapping("/patinetacompleta/jpql")
+    public List<Patineta> obtenerPatinetaCompletaJPQL() {
+        return patinetaService.obtenerPatinetaCompletaJPQL();
+    }
 
 }

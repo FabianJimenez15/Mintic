@@ -2,6 +2,7 @@ package com.MinTicCiclo3.Model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,9 +24,9 @@ public class Categoria {
     private String Nombre;
     private String Descripcion;
 
-    @OneToMany(mappedBy = "categoria") 
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "categoria") 
     @JsonIgnoreProperties({"categoria"}) 
-    private List<Patineta> patineta;
+    public List<Patineta> patinetas;
 
     public Integer getId() {
         return id;
@@ -45,12 +46,13 @@ public class Categoria {
     public void setDescripcion(String descripcion) {
         Descripcion = descripcion;
     }
-    public List<Patineta> getPatineta() {
-        return patineta;
+    public List<Patineta> getPatinetas() {
+        return patinetas;
     }
-    public void setPatineta(List<Patineta> patineta) {
-        this.patineta = patineta;
+    public void setPatinetas(List<Patineta> patinetas) {
+        this.patinetas = patinetas;
     }
+    
 
     
 }

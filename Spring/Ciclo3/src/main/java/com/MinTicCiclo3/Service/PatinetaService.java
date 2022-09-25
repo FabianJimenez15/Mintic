@@ -9,41 +9,37 @@ import org.springframework.stereotype.Service;
 import com.MinTicCiclo3.Model.Patineta;
 import com.MinTicCiclo3.Repository.PatinetaRepository;
 
-
-
-@Service 
+@Service
 public class PatinetaService {
 
     @Autowired
     private PatinetaRepository patinetaRepository;
 
-    
-    public List<Patineta> obtenerPatinetaCompleta(){
+    public List<Patineta> obtenerPatinetaCompleta() {
         return patinetaRepository.obtenerPatinetaCompleta();
     }
-    public Optional<Patineta> obtenerPatinetaId(Integer id){
+
+    public Optional<Patineta> obtenerPatinetaId(Integer id) {
         return patinetaRepository.obtenerPatinetaId(id);
     }
 
-    public Patineta salvarPatineta(Patineta patineta){
-        if (patineta.getId()==null){
+    public Patineta salvarPatineta(Patineta patineta) {
+        if (patineta.getId() == null) {
             return patinetaRepository.salvarPatineta(patineta);
-        }
-        else{
+        } else {
 
-            Optional <Patineta> patinetaAuxiliar = patinetaRepository.obtenerPatinetaId(patineta.getId());
-            if (patinetaAuxiliar.isEmpty()){
+            Optional<Patineta> patinetaAuxiliar = patinetaRepository.obtenerPatinetaId(patineta.getId());
+            if (patinetaAuxiliar.isEmpty()) {
                 return patinetaRepository.salvarPatineta(patineta);
-            }
-            else{
+            } else {
                 return patineta;
             }
         }
 
     }
- // JPQL
- /* 
- public List<Patineta> obtenerPatinetaCompletaJPQL(){
-    return patinetaRepository.obtenerPatinetaCompletaJPQL();
-}*/
+    // JPQL
+
+    public List<Patineta> obtenerPatinetaCompletaJPQL() {
+        return patinetaRepository.obtenerPatinetaCompletaJPQL();
+    }
 }
