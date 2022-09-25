@@ -1,4 +1,5 @@
-package com.MinTicCiclo3.Ciclo3;
+package com.MinTicCiclo3;
+
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

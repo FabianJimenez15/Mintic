@@ -18,46 +18,36 @@ public class Patineta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    private Integer year;
+    private Integer yearb;
     private String description;
     private Integer category_id;
-
     public Integer getId() {
         return id;
     }
-
     public void setId(Integer id) {
         this.id = id;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
-    public Integer getYear() {
-        return year;
+    public Integer getYearb() {
+        return yearb;
     }
-
-    public void setYear(Integer year) {
-        this.year = year;
+    public void setYearb(Integer yearb) {
+        this.yearb = yearb;
     }
-
     public String getDescription() {
         return description;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }
-
     public Integer getCategory_id() {
         return category_id;
     }
-
     public void setCategory_id(Integer category_id) {
         this.category_id = category_id;
     }
