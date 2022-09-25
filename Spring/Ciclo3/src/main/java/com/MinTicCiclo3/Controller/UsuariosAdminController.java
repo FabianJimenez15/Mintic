@@ -19,7 +19,7 @@ import com.MinTicCiclo3.Model.UsuariosAdmin;
 import com.MinTicCiclo3.Service.UsuariosAdminService;
 
 @RestController
-@RequestMapping("/api/usuarioAdmin")
+@RequestMapping("/api/usuariosAdmin")
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE })
 public class UsuariosAdminController {
     
@@ -27,7 +27,7 @@ public class UsuariosAdminController {
     @Autowired
     private UsuariosAdminService usuarioAdminService;
 
-    @GetMapping("/usuarioAdminCompleta")
+    @GetMapping("/usuariosAdminCompleta")
     public List<UsuariosAdmin> obtenerUsuarioAdminCompleta() {
         return usuarioAdminService.obtenerUsuariosAdminCompleta();
     }
@@ -37,7 +37,7 @@ public class UsuariosAdminController {
         return usuarioAdminService.obtenerUsuariosAdminId(identificador);
     }
 
-    @PostMapping("salvarUsuarioAdmin")
+    @PostMapping("salvarUsuariosAdmin")
     @ResponseStatus(HttpStatus.CREATED)
     public UsuariosAdmin salvarUsuarioAdmin(@RequestBody UsuariosAdmin usuarioAdmin) {
         return usuarioAdminService.salvarUsuariosAdmin(usuarioAdmin);
@@ -45,7 +45,7 @@ public class UsuariosAdminController {
     }
 
     // Consultas personalizadas
-    @GetMapping("/usuarioAdmincompleta/jpql")
+    @GetMapping("/usuariosAdmincompleta/jpql")
     public List<UsuariosAdmin> obtenerUsuariosAdminCompletaJPQL() {
         return usuarioAdminService.obtenerUsuariosAdminCompletaJPQL();
     }

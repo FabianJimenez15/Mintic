@@ -36,7 +36,7 @@ public class PatinetaController {
         return patinetaService.obtenerPatinetaId(identificador);
     }
 
-    @PostMapping("salvarpatineta")
+    @PostMapping("salvarPatineta")
     @ResponseStatus(HttpStatus.CREATED)
     public Patineta salvarPatineta(@RequestBody Patineta patineta) {
         return patinetaService.salvarPatineta(patineta);

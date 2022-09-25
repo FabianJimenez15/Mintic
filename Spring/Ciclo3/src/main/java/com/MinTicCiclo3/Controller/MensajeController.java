@@ -38,7 +38,7 @@ public class MensajeController {
         return mensajeService.obtenerMensajeId(identificador);
     }
 
-    @PostMapping("salvarmensaje")
+    @PostMapping("salvarMensaje")
     @ResponseStatus( HttpStatus.CREATED)
     public Mensaje salvarMensaje(@RequestBody Mensaje mensaje) {
         return mensajeService.salvarMensaje(mensaje);
@@ -46,7 +46,7 @@ public class MensajeController {
     }
 
     // Consultas personalizadas
-    @GetMapping("/mensajecompleta/jpql")
+    @GetMapping("/mensajeCompleta/jpql")
     public List<Mensaje> obtenerMensajeCompletaJPQL() {
         return mensajeService.obtenerMensajeCompletaJPQL();
     }
