@@ -22,7 +22,7 @@ import com.MinTicCiclo3.Service.PatinetaService;
 @RestController
 @RequestMapping("/api/patineta")
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET,  RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
-public class PapeleriaController {
+public class PatinetaController {
 
     @Autowired
     private PatinetaService patinetaService;
