@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "skate")
+@Table(name = "skates")
 public class skates {
 
     @Id
@@ -22,9 +22,9 @@ public class skates {
     // private Integer Categoria_id;
 
     @ManyToOne
-    @JoinColumn(name = "categoriaId")
-    @JsonIgnoreProperties({ "skate" })
-    private Category categoria;
+    @JoinColumn(name = "categoryId")
+    @JsonIgnoreProperties({ "skates" })
+    private Category category;
 
     public Integer getId() {
         return id;
@@ -58,13 +58,15 @@ public class skates {
         this.description = description;
     }
 
-    public Category getCategoria() {
-        return categoria;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setCategoria(Category categoria) {
-        this.categoria = categoria;
+    public void setCategory(Category category) {
+        this.category = category;
     }
+
+    
 
 
     // public Integer getCategoria_id() {
