@@ -36,7 +36,7 @@ public class CategoriaController {
         return categoriaService.obtenerCategoriaId(identificador);
     }
 
-    @PostMapping("/salvarCategoria")
+    @PostMapping("salvarCategoria")
     @ResponseStatus(HttpStatus.CREATED)
     public Categoria salvarCategoria(@RequestBody Categoria categoria){
         return categoriaService.salvarCategoria(categoria);
