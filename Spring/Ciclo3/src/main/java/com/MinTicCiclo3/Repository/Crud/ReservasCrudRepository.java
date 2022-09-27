@@ -1,5 +1,10 @@
 package com.MinTicCiclo3.Repository.Crud;
 
-public interface ReservasCrudRepository {
+import com.MinTicCiclo3.Model.Reservas;
+import org.springframework.data.repository.CrudRepository;
+
+public interface ReservasCrudRepository extends CrudRepository<Reservas, Integer>{
+    
+    
     
 }
