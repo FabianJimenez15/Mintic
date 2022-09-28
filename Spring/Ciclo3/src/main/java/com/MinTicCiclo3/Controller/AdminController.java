@@ -21,10 +21,10 @@ import com.MinTicCiclo3.Service.AdminService;
 
 
 @RestController
-@RequestMapping("/api/Admin")
+@RequestMapping("/api/admin")
 @CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE })
 public class AdminController {
-    
+      
     @Autowired
     private AdminService adminService;
 
@@ -52,3 +52,4 @@ public class AdminController {
     }
     
 }
+

@@ -12,7 +12,7 @@ import com.MinTicCiclo3.Repository.AdminRepository;
 @Service
 public class AdminService {
        
-
+ 
     @Autowired
     private AdminRepository adminRepository;
 

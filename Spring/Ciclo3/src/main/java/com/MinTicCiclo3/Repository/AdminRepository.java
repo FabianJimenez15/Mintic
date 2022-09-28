@@ -11,7 +11,7 @@ import com.MinTicCiclo3.Repository.Crud.AdminCrudRepository;
 
 @Repository
 public class AdminRepository {
-    
+     
     @Autowired
     private AdminCrudRepository adminCrudRepository;
 
