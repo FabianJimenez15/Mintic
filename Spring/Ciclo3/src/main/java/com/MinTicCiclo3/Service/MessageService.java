@@ -11,35 +11,34 @@ import com.MinTicCiclo3.Repository.MessageRepository;
 
 @Service
 public class MessageService {
-
     @Autowired
-    private MessageRepository mensajeRepository;
+    private MessageRepository messageRepository;
 
-    public List<Message> obtenerMensajeCompleta() {
-        return mensajeRepository.obtenerMensajeCompleta();
+    public List<Message> obtenerMessageCompleta() {
+        return messageRepository.obtenerMessageCompleta();
     }
 
-    public Optional<Message> obtenerMensajeId(Integer id) {
-        return mensajeRepository.obtenerMensajeId(id);
+    public Optional<Message> obtenerMessageId(Integer id) {
+        return messageRepository.obtenerMessageId(id);
     }
 
-    public Message salvarMensaje(Message mensaje) {
-        if (mensaje.getId() == null) {
-            return mensajeRepository.salvarMensaje(mensaje);
+    public Message salvarMessage(Message message) {
+        if (message.getId() == null) {
+            return messageRepository.salvarMessage(message);
         } else {
 
-            Optional<Message> mensajeAuxiliar = mensajeRepository.obtenerMensajeId(mensaje.getId());
-            if (mensajeAuxiliar.isEmpty()) {
-                return mensajeRepository.salvarMensaje(mensaje);
+            Optional<Message> messageAuxiliar = messageRepository.obtenerMessageId(message.getId());
+            if (messageAuxiliar.isEmpty()) {
+                return messageRepository.salvarMessage(message);
             } else {
-                return mensaje;
+                return message;
             }
         }
 
     }
     // JPQL
 
-    public List<Message> obtenerMensajeCompletaJPQL() {
-        return mensajeRepository.obtenerMensajeCompletaJPQL();
+    public List<Message> obtenerMessageCompletaJPQL() {
+        return messageRepository.obtenerMessageCompletaJPQL();
     }
 }

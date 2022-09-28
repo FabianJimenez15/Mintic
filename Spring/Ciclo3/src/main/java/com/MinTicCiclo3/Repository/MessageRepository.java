@@ -1,5 +1,4 @@
 package com.MinTicCiclo3.Repository;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -12,27 +11,24 @@ import com.MinTicCiclo3.Repository.Crud.MessageCrudRepository;
 
 @Repository
 public class MessageRepository {
-    
-
     @Autowired
-    private MessageCrudRepository mensajeCrudRepository;
+    private MessageCrudRepository messageCrudRepository;
 
-    public List<Message> obtenerMensajeCompleta() {
-        return (List<Message>) mensajeCrudRepository.findAll();
+    public List<Message> obtenerMessageCompleta() {
+        return (List<Message>) messageCrudRepository.findAll();
     }
 
-    public Optional<Message> obtenerMensajeId(Integer id) {
-        return mensajeCrudRepository.findById(id);
+    public Optional<Message> obtenerMessageId(Integer id) {
+        return messageCrudRepository.findById(id);
     }
 
-    public Message salvarMensaje(Message mensaje) {
-        return mensajeCrudRepository.save(mensaje);
+    public Message salvarMessage(Message message) {
+        return messageCrudRepository.save(message);
     }
 
     // Uso JPQL Java Persitence Query Language
 
-    public List<Message> obtenerMensajeCompletaJPQL() {
-        return mensajeCrudRepository.obtenerMensajeCompletaJPQL();
+    public List<Message> obtenerMessageCompletaJPQL() {
+        return messageCrudRepository.obtenerMessageCompletaJPQL();
     }
-
 }

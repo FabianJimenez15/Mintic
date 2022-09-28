@@ -8,33 +8,32 @@ import org.springframework.stereotype.Service;
 
 import com.MinTicCiclo3.Model.Category;
 import com.MinTicCiclo3.Repository.CategoryRepository;
-
 @Service
 public class CategoryService {
+
     @Autowired
-    private CategoryRepository categoriaRepository;
+    private CategoryRepository categoryRepository;
     
-    public List<Category> obtenerCategoriaCompleta(){
-        return categoriaRepository.obtenerCategoriaCompleta();
+    public List<Category> obtenerCategoryCompleta(){
+        return categoryRepository.obtenerCategoryCompleta();
     }
-        public Optional<Category> obtenerCategoriaId(Integer id){
-            return categoriaRepository.obtenerCategoriaId(id);
+        public Optional<Category> obtenerCategoryId(Integer id){
+            return categoryRepository.obtenerCategoryId(id);
         }
         
-        public Category salvarCategoria(Category categoria){
-            if (categoria.getId()==null){
-                return categoriaRepository.salvarCategoria(categoria);
+        public Category salvarCategory(Category category){
+            if (category.getId()==null){
+                return categoryRepository.salvarCategory(category);
             }
             else{
-                Optional <Category> categoriaAuxiliar = categoriaRepository.obtenerCategoriaId(categoria.getId());
-                if (categoriaAuxiliar.isEmpty()){
-                    return categoriaRepository.salvarCategoria(categoria);
+                Optional <Category> categoryAuxiliar = categoryRepository.obtenerCategoryId(category.getId());
+                if (categoryAuxiliar.isEmpty()){
+                    return categoryRepository.salvarCategory(category);
                 }
                 else{
-                    return categoria;
+                    return category;
                 }
             }
     
         }
-    
 }

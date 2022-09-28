@@ -11,19 +11,21 @@ import com.MinTicCiclo3.Repository.Crud.CategoryCrudRepository;
 
 @Repository
 public class CategoryRepository {
+    
     @Autowired
-    private CategoryCrudRepository categoriaCrudRepository;
+    private CategoryCrudRepository categoryCrudRepository;
     
-    public List <Category> obtenerCategoriaCompleta(){
+    public List <Category> obtenerCategoryCompleta(){
     
-        return (List<Category>) categoriaCrudRepository.findAll();
+        return (List<Category>) categoryCrudRepository.findAll();
     
     }
-    public Optional<Category> obtenerCategoriaId(Integer id){
-        return categoriaCrudRepository.findById(id);
+    public Optional<Category> obtenerCategoryId(Integer id){
+        return categoryCrudRepository.findById(id);
     }
     
-    public Category  salvarCategoria(Category categoria){
-        return categoriaCrudRepository.save(categoria);        
+    public Category  salvarCategory(Category category){
+        return categoryCrudRepository.save(category);        
     }
+
 }

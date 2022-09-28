@@ -1,5 +1,6 @@
 package com.MinTicCiclo3.Repository;
 
+
 import com.MinTicCiclo3.Model.Client;
 import com.MinTicCiclo3.Repository.Crud.ClientCrudRepository;
 import java.util.List;
@@ -9,20 +10,23 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class ClientRepository {
-    
- @Autowired   
- private ClientCrudRepository clienteCrudRepository; 
-    
-   public List <Client> obtenerClienteCompleta(){
-        return  (List<Client>) clienteCrudRepository.findAll();
-   } 
-    
-   public Optional <Client> obtenerClienteId(Integer id){
-         return clienteCrudRepository.findById(id);
-   }
+
+     @Autowired
+     private ClientCrudRepository clientCrudRepository;
+ 
+     public List<Client> obtenerClientCompleta() {
+         return (List<Client>) clientCrudRepository.findAll();
+     }
+ 
+     public Optional<Client> obtenerClientId(Integer id) {
+         return clientCrudRepository.findById(id);
+     }
+ 
+     public Client salvarClient(Client client) {
+         return clientCrudRepository.save(client);
+     }
+ 
    
-   public Client salvarCliente(Client cliente){
-        return  clienteCrudRepository.save(cliente);
-   }
-   
+ 
+
 }

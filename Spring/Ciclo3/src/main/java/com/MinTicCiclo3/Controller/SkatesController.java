@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,40 +14,39 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.http.HttpStatus;
-
-import com.MinTicCiclo3.Model.skates;
+import com.MinTicCiclo3.Model.Skates;
 import com.MinTicCiclo3.Service.SkatesService;
 
 @RestController
-@RequestMapping("/api/patineta")
+@RequestMapping("/api/skates")
 @CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE })
 public class SkatesController {
-
+    
     @Autowired
-    private SkatesService patinetaService;
+    private SkatesService skatesService;
 
-    @GetMapping("/patinetaCompleta")
-    public List<skates> obtenerPatinetaCompleta() {
-        return patinetaService.obtenerPatinetaCompleta();
+    @GetMapping("/skatesCompleta")
+    public List<Skates> obtenerSkatesCompleta() {
+        return skatesService.obtenerSkatesCompleta();
     }
 
     @GetMapping("/{id}")
-    public Optional<skates> obtenerPatinetaId(@PathVariable("id") Integer identificador) {
-        return patinetaService.obtenerPatinetaId(identificador);
+    public Optional<Skates> obtenerSkatesId(@PathVariable("id") Integer identificador) {
+        return skatesService.obtenerSkatesId(identificador);
     }
 
-    @PostMapping("salvarPatineta")
+    @PostMapping("salvarskates")
     @ResponseStatus(HttpStatus.CREATED)
-    public skates salvarPatineta(@RequestBody skates patineta) {
-        return patinetaService.salvarPatineta(patineta);
+    public Skates salvarSkates(@RequestBody Skates skates) {
+        return skatesService.salvarSkates(skates);
 
     }
 
     // Consultas personalizadas
-    @GetMapping("/patinetacompleta/jpql")
-    public List<skates> obtenerPatinetaCompletaJPQL() {
-        return patinetaService.obtenerPatinetaCompletaJPQL();
+    @GetMapping("/skatescompleta/jpql")
+    public List<Skates> obtenerSkatesCompletaJPQL() {
+        return skatesService.obtenerSkatesCompletaJPQL();
     }
+
 
 }

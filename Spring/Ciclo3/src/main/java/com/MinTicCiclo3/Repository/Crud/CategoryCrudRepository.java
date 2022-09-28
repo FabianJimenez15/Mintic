@@ -6,5 +6,4 @@ import com.MinTicCiclo3.Model.Category;
 
 public interface CategoryCrudRepository extends CrudRepository<Category, Integer>{
     
-   
 }
