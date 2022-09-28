@@ -44,4 +44,10 @@ public class ClientController {
         return clientService.salvarClient(client);
     }
 
+    // Consultas personalizadas
+    @GetMapping("/scorecompleta/jpql")
+    public List<Client> obtenerClientCompletaJPQL() {
+        return clientService.obtenerClientCompletaJPQL();
+    }
+
 }

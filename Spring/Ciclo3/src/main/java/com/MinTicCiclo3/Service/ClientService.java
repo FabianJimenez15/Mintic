@@ -35,5 +35,10 @@ public class ClientService {
 
         }
     }
+    // JPQL
+
+    public List<Client> obtenerClientCompletaJPQL() {
+        return clientRepository.obtenerClientCompletaJPQL();
+    }
 
 }

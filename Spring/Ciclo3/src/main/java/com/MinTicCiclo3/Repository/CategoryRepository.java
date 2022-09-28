@@ -27,5 +27,9 @@ public class CategoryRepository {
     public Category  salvarCategory(Category category){
         return categoryCrudRepository.save(category);        
     }
+// Uso JPQL Java Persitence Query Language
 
+public List<Category> obtenerCategoryCompletaJPQL() {
+    return categoryCrudRepository.obtenerCategoryCompletaJPQL();
+}
 }

@@ -36,4 +36,10 @@ public class CategoryService {
             }
     
         }
+// JPQL
+
+public List<Category> obtenerCategoryCompletaJPQL() {
+    return categoryRepository.obtenerCategoryCompletaJPQL();
+}
+
 }

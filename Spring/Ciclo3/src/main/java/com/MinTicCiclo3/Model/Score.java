@@ -6,24 +6,31 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "message")
-public class Message {
+@Table(name = "score")
+public class Score {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String messageTexString;
+    private Integer messageText;
+    private String starts;
+    
     public Integer getId() {
         return id;
     }
     public void setId(Integer id) {
         this.id = id;
     }
-    public String getMessageTexString() {
-        return messageTexString;
+    public Integer getMessageText() {
+        return messageText;
     }
-    public void setMessageTexString(String messageTexString) {
-        this.messageTexString = messageTexString;
+    public void setMessageText(Integer messageText) {
+        this.messageText = messageText;
     }
-    
+    public String getStarts() {
+        return starts;
+    }
+    public void setStarts(String starts) {
+        this.starts = starts;
+    }
 
 }

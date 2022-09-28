@@ -21,13 +21,13 @@ import com.MinTicCiclo3.Service.MessageService;
 
 
 @RestController
-@RequestMapping("/api/mensaje")
+@RequestMapping("/api/message")
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE })
 public class MessageController {
     @Autowired
     private MessageService messageService;
 
-    @GetMapping("/mensajeCompleta")
+    @GetMapping("/messageCompleta")
     public List<Message> obtenerMessageCompleta() {
         return messageService.obtenerMessageCompleta();
     }
@@ -37,7 +37,7 @@ public class MessageController {
         return messageService.obtenerMessageId(identificador);
     }
 
-    @PostMapping("salvarMensaje")
+    @PostMapping("salvarMessage")
     @ResponseStatus( HttpStatus.CREATED)
     public Message salvarMessage(@RequestBody Message message) {
         return messageService.salvarMessage(message);
@@ -45,7 +45,7 @@ public class MessageController {
     }
 
     // Consultas personalizadas
-    @GetMapping("/mensajeCompleta/jpql")
+    @GetMapping("/messageCompleta/jpql")
     public List<Message> obtenerMessageCompletaJPQL() {
         return messageService.obtenerMessageCompletaJPQL();
     }

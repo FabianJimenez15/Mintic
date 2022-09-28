@@ -41,4 +41,9 @@ public class CategoryController {
         return categoryService.salvarCategory(category);
 
     }
+    // Consultas personalizadas
+    @GetMapping("/scorecompleta/jpql")
+    public List<Category> obtenerCategoryCompletaJPQL() {
+        return categoryService.obtenerCategoryCompletaJPQL();
+    }
 }

@@ -25,7 +25,11 @@ public class ClientRepository {
      public Client salvarClient(Client client) {
          return clientCrudRepository.save(client);
      }
- 
+ // Uso JPQL Java Persitence Query Language
+
+ public List<Client> obtenerClientCompletaJPQL() {
+    return clientCrudRepository.obtenerClientCompletaJPQL();
+}
    
  
 

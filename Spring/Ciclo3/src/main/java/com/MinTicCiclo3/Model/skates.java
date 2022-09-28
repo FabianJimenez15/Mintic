@@ -17,9 +17,10 @@ public class Skates {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String name;
+    private String brand;
     private Integer yearb;  //error con variable year
     private String description;
+    private String name;
 
     @ManyToOne
     @JoinColumn(name = "categoryId")
@@ -50,6 +51,19 @@ public class Skates {
     public void setDescription(String description) {
         this.description = description;
     }
+    public String getBrand() {
+        return brand;
+    }
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+    public Category getCategory() {
+        return category;
+    }
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+    
     
    
 
