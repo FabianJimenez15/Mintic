@@ -1,19 +1,19 @@
 package com.MinTicCiclo3.Model;
 
-import javax.persistence.Entity;
+//import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
+//@Entity
 @Table(name = "useradmin")
 public class Admin {
-     private Integer Id;
+    private Integer Id;
     private String email;
     private String password;
     private String name;
-
+ 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getId() {

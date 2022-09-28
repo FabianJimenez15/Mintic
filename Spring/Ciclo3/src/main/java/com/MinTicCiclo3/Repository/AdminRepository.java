@@ -1,17 +1,17 @@
 package com.MinTicCiclo3.Repository;
 
-import java.util.List;
-import java.util.Optional;
+//import java.util.List;
+//import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.MinTicCiclo3.Model.Admin;
-import com.MinTicCiclo3.Repository.Crud.AdminCrudRepository;
+//import com.MinTicCiclo3.Model.Admin;
+//import com.MinTicCiclo3.Repository.Crud.AdminCrudRepository;
 
 @Repository
 public class AdminRepository {
-     
+     /* 
     @Autowired
     private AdminCrudRepository adminCrudRepository;
 
@@ -31,5 +31,5 @@ public class AdminRepository {
 
     public List<Admin> obtenerAdminCompletaJPQL() {
         return adminCrudRepository.obtenerAdminCompletaJPQL();
-    }
+    }*/
 }

@@ -1,7 +1,7 @@
 package com.MinTicCiclo3.Controller;
 
-import java.util.List;
-import java.util.Optional;
+//import java.util.List;
+/*import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,11 +20,11 @@ import com.MinTicCiclo3.Service.AdminService;
 
 
 
-@RestController
+/*@RestController
 @RequestMapping("/api/admin")
-@CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE })
+@CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE })*/
 public class AdminController {
-      
+     /* 
     @Autowired
     private AdminService adminService;
 
@@ -50,6 +50,6 @@ public class AdminController {
     public List<Admin> obtenerAdminCompletaJPQL() {
         return adminService.obtenerAdminCompletaJPQL();
     }
-    
+    */
 }
 

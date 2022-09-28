@@ -1,19 +1,19 @@
 package com.MinTicCiclo3.Service;
 
-import java.util.List;
-import java.util.Optional;
+//import java.util.List;
+//import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.MinTicCiclo3.Model.Admin;
-import com.MinTicCiclo3.Repository.AdminRepository;
+//import com.MinTicCiclo3.Model.Admin;
+//import com.MinTicCiclo3.Repository.AdminRepository;
 
 @Service
 public class AdminService {
        
  
-    @Autowired
+    /*@Autowired
     private AdminRepository adminRepository;
 
     public List<Admin> obtenerAdminCompleta() {
@@ -42,6 +42,6 @@ public class AdminService {
 
     public List<Admin> obtenerAdminCompletaJPQL() {
         return adminRepository.obtenerAdminCompletaJPQL();
-    }
+    }*/
 
 }
