@@ -43,7 +43,7 @@ function pintarRespuestaSkates(items) {
     $("#resultado").empty();
     let myTable = "<table border='1'>";
     myTable += "<caption> SKATE </caption>";
-    myTable += "<tr><th>CODE</th> <th> NAME</th> <th> BRAND</th> <th> YEAR</th> </th>";
+    myTable += "<tr><th>CODE</th> <th> NAME</th> <th> BRAND</th> <th> YEAR</th>  <th> DESCRIPTION</th>  <th> CODE CATEGORY</th>  <th> NAME CATEGORY</th>  <th> DESCRIPTION CATEGORY</th>  <th> MESSAGE</th>  <th> RESERVATION</th> </th>";
     for (i = 0; i < items.length; i++) {
         myTable += "<tr>";
         myTable += "<td>" + items[i].id + "</td>";
