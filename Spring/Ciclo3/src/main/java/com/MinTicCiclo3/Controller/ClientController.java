@@ -20,14 +20,14 @@ import com.MinTicCiclo3.Service.ClientService;
 
 
 @RestController
-@RequestMapping("/api/client")
+@RequestMapping("/api/Client")
 @CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class ClientController {
     
     @Autowired
     private ClientService clientService;
 
-    @GetMapping("/clientcompleta") // http://localhost:8080/api/cliente/clientecompleta
+    @GetMapping("/all") // http://localhost:8080/api/cliente/clientecompleta
     public List<Client> obtenerClientCompleta() {
         return clientService.obtenerClientCompleta();
     }
@@ -38,7 +38,7 @@ public class ClientController {
     }
     
         
-    @PostMapping("salvarclient") // http://localhost:8080/api/cliente/salvarcliente
+    @PostMapping("/save") // http://localhost:8080/api/cliente/salvarcliente
     @ResponseStatus(HttpStatus.CREATED)
     public Client salvarClient(@RequestBody Client client) {
         return clientService.salvarClient(client);

@@ -1,10 +1,16 @@
 package com.MinTicCiclo3.Model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  *
@@ -21,6 +27,14 @@ public class Client {
     private Integer password;
     private String name;
     private Integer age;
+
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "client")
+    @JsonIgnoreProperties("client")
+    public List<Message> message;
+    
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "client")
+    @JsonIgnoreProperties("client")
+    public List<Reservation> reservation;
 
     
     public Integer getId() {
@@ -53,6 +67,20 @@ public class Client {
     public void setPassword(Integer password) {
         this.password = password;
     }
+    public List<Message> getMessage() {
+        return message;
+    }
+    public void setMessage(List<Message> message) {
+        this.message = message;
+    }
+    public List<Reservation> getReservation() {
+        return reservation;
+    }
+    public void setReservation(List<Reservation> reservation) {
+        this.reservation = reservation;
+    }
+    
+    
 
     
 

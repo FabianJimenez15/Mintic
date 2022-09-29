@@ -18,14 +18,14 @@ import com.MinTicCiclo3.Model.Skates;
 import com.MinTicCiclo3.Service.SkatesService;
 
 @RestController
-@RequestMapping("/api/skates")
+@RequestMapping("/api/Skate")
 @CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE })
 public class SkatesController {
     
     @Autowired
     private SkatesService skatesService;
 
-    @GetMapping("/skatesCompleta")
+    @GetMapping("/all")
     public List<Skates> obtenerSkatesCompleta() {
         return skatesService.obtenerSkatesCompleta();
     }
@@ -35,7 +35,7 @@ public class SkatesController {
         return skatesService.obtenerSkatesId(identificador);
     }
 
-    @PostMapping("salvarskates")
+    @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
     public Skates salvarSkates(@RequestBody Skates skates) {
         return skatesService.salvarSkates(skates);

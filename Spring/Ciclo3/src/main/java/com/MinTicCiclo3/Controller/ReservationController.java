@@ -17,14 +17,14 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/reservation")
+@RequestMapping("/api/Reservation")
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class ReservationController {
     
     @Autowired
    private ReservationService reservationService;
     
-   @GetMapping("/reservationcompleta")
+   @GetMapping("/all")
    public List<Reservation> obtenerReservationCompleta(){
        return reservationService.obtenerReservationCompleta();
    }
@@ -32,7 +32,7 @@ public class ReservationController {
    public Optional<Reservation> obtenerReservationId(@PathVariable("id") Integer identificador){
        return reservationService.obtenerReservationId(identificador);
    }
-   @PostMapping("salvarreservation")
+   @PostMapping("/save")
    @ResponseStatus(HttpStatus.CREATED)
    public Reservation salvarReservation(@RequestBody Reservation reservation){
        return reservationService.salvarReservation(reservation);

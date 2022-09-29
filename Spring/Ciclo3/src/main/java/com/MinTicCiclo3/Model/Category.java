@@ -46,6 +46,12 @@ public class Category {
     public void setDescription(String description) {
         this.description = description;
     }
+    public List<Skates> getSkates() {
+        return skates;
+    }
+    public void setSkates(List<Skates> skates) {
+        this.skates = skates;
+    }
 
   /*   @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "category") 
     @JsonIgnoreProperties({"category"}) 

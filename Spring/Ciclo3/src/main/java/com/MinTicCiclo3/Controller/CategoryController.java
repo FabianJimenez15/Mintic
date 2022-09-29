@@ -19,23 +19,23 @@ import com.MinTicCiclo3.Model.Category;
 import com.MinTicCiclo3.Service.CategoryService;
 
 @RestController
-@RequestMapping("/api/category")
+@RequestMapping("/api/Category")
 @CrossOrigin(origins="*",methods ={RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 public class CategoryController {
     
     @Autowired
     private CategoryService categoryService;
-    @GetMapping("/categoryCompleta")
+    @GetMapping("/all")
     public List<Category> obtenerCategoryCompleta(){
         return categoryService.obtenerCategoryCompleta();
     }
 
-    @GetMapping("/identificador/{id}")
+    @GetMapping("/{id}")
     public Optional<Category> obtenerCategoryId(@PathVariable("id") Integer identificador){
         return categoryService.obtenerCategoryId (identificador);
     }
 
-    @PostMapping("salvarategory")
+    @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
     public Category salvarCategory(@RequestBody Category category){
         return categoryService.salvarCategory(category);
