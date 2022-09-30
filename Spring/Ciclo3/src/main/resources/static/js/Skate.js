@@ -35,8 +35,7 @@ function ConsultarInformacionSkates() {
         error: function (xhr, status) {
             alert('Operacion no satisfactoria' + xhr.status);
         }
-    }
-    );
+    });
 }
 
 function pintarRespuestaSkates(items) {
@@ -60,5 +59,5 @@ function pintarRespuestaSkates(items) {
         myTable += "</tr>";
     }
     myTable += "</table>";
-    $("#resultado").append(myTable);
+    $("#resultadoCliente").append(myTable);
 }
