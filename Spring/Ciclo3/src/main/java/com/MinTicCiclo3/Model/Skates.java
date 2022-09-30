@@ -33,11 +33,11 @@ public class Skates {
     private Category category;
 
     @OneToMany(cascade = { CascadeType.PERSIST }, mappedBy = "skates")
-    @JsonIgnoreProperties({ "bike", "client" })
+    @JsonIgnoreProperties({ "skates", "client" })
     private List<Message> message;
 
     @OneToMany(cascade = { CascadeType.PERSIST }, mappedBy = "skates")
-    @JsonIgnoreProperties({ "bike", "message" })
+    @JsonIgnoreProperties({ "skates", "message" })
     private List<Reservation> reservation;
 
     public Integer getId() {
