@@ -16,7 +16,7 @@ function InsertarInformacionSkates() {
         contentType: 'application/json',
         success: function (respuesta) {
             alert("Insercion exitosa");
-            console.log()
+            console.log();
         },
         error: function (xhr, status) {
             alert('Operacion no satisfactoria' + xhr.status);
@@ -31,7 +31,7 @@ function ConsultarInformacionSkates() {
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
-            pintarRespuestaSkates(respuesta);
+            pintarRespuestaSkates(respuesta.items);
         },
         error: function (xhr, status) {
             alert('Operacion no satisfactoria' + xhr.status);
