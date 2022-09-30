@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Category.js"></script>
+    <script type="text/javascript" src="js/Client.js"></script>
+    <script type="text/javascript" src="Message.js"></script>
+        <title>MinTic</title>
+</head>
+
+<body>
+    <h1>RETAL OF SKATES</h1>
+
+    <h1> CATEGORY</h1>
+
+    <div>
+        <input type="text" id="nameCategory" placeholder="Name">
+        <input type="text" id="descriptionCategory" placeholder="Description">
+    </div>
+    <div>
+        <button onclick="ConsultarInformacionCategory()">Consultar</button>
+        <button onclick="InsertarInformacionCategory()">Insertar</button>
+        
+    </div>
+     <div id="resultadoCategory"> </div>
+    <h1> SKATES</h1>
+
+    <div>
+        <input type="text" id="nameSkate" placeholder="Name">
+        <input type="text" id="descriptionSkate" placeholder="Description">
+        <input type="text" id="brandSkate" placeholder="Brand">
+        <input type="number" id="modelSkate" placeholder="Year">
+        <input type="number" id="category_idSkate" placeholder="Category">
+              
+    </div>
+    <div>
+        <button onclick="ConsultarInformacionSkates()">Consultar</button>
+        <button onclick="InsertarInformacionSkates()">Insertar</button>
+        
+    </div>
+    <div id="resultadoSkate"> </div>
+
+    <H1>CLIENT</H1>
+    <div>
+        <input type="text" id="nameCliente" placeholder="Name">
+        <input type="text" id="emailCliente" placeholder="Email">
+        <input type="text" id="passwordCliente" placeholder="Password">
+        <input type="number" id="ageCliente" placeholder="Age">
+        
+        
+    </div>
+    <div>
+        <button onclick="ConsultarInformacionClient()">Consultar</button>
+        <button onclick="InsertarInformacionClient()">Insertar</button>
+        
+    </div>
+    <div id="resultadoCliente"> </div>
+    
+    <H1>MENSSAGE</H1>
+    <div>
+         <input type="text" id="messagetext" placeholder="Message">
+         <input type="number" id="idClient" placeholder="IdClient">
+         <input type="number" id="idSkate" placeholder="IdSkate">
+    </div>
+    <div>
+        <button onclick="ConsultarInformacionMessage()">Consultar</button>
+        <button onclick="InsertarInformacionMessage()">Insertar</button>
+        
+    </div>
+    <div id="resultadoMessage"> </div>    
+    
+    <H1>RESERVATION</H1>
+    <div>
+         <input type="date" id="startDate" placeholder="">
+         <input type="date" id="devolutionDate" placeholder="">
+         <input type="number" id="idClient" placeholder="IdClient">
+         <input type="number" id="idSakte" placeholder="IdSkate">
+    </div>
+    <div>
+        <button onclick="ConsultarInformacionReservation()">Consultar</button>
+        <button onclick="InsertarInformacionReservation()">Insertar</button>
+        
+    </div>
+     <div id="resultadoReservation"> </div>
+</body>
+
+</html>
