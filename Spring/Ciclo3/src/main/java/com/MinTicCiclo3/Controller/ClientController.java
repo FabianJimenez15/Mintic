@@ -38,7 +38,7 @@ public class ClientController {
     }
     
         
-    @PostMapping("/save") // http://localhost:8080/api/cliente/save
+    @PostMapping("/save") 
     @ResponseStatus(HttpStatus.CREATED)
     public Client salvarClient(@RequestBody Client client) {
         return clientService.salvarClient(client);
