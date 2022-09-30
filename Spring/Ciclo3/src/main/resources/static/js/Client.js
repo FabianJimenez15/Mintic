@@ -1,10 +1,12 @@
 function InsertarInformacionClient(){
    $("#resultadoCliente").empty();
    let myData={ 
-       name:$("#nameCliente").val(),
        email:$("#emailCliente").val(),
        password:$("#passwordCliente").val(),
-       age:$("#ageCliente").val(),
+       name:$("#nameCliente").val(),
+       age:$("#ageCliente").val()
+       
+       
    };
     let dataToSend =JSON.stringify(myData);
     $.ajax({
@@ -27,14 +29,14 @@ function ConsultarInformacionClient(){
          type : "GET",
         datatype: "JSON",
         success: function (respuesta) {
-            pintarRespuestaSkates(respuesta);
+            pintarRespuestaClients(respuesta.items);
         },
         error: function (xhr, status) {
             alert('Operacion no satisfactoria' + xhr.status);
         }
         });
 }
-function pintarRespuestaSkates(items) {
+function pintarRespuestaClients(items) {
     $("#resultadoCliente").empty();
     let myTable =  "<table border='1'>";
      myTable += "<caption> CLIENT <caption>";
