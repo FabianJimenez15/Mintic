@@ -5,7 +5,7 @@ function InsertarInformacionSkates() {
         description: $("#descriptionSkate").val(),
         brand: $("#brandSkate").val(),
         yearb:$("#yearSkate").val(),
-        categoryId :$("#category_idSkate").val(),
+        categoryId :$("#category_idSkate").val()
     };
     let dataToSend = JSON.stringify(myData);
     $.ajax({
