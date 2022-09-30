@@ -53,5 +53,5 @@ function pintarRespuestaClients(items) {
           
      }
      myTable += "</table>";
-     $("#resultado").append(myTable);
+     $("#resultadoCliente").append(myTable);
 }
