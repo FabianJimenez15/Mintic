@@ -103,18 +103,18 @@ public class Skates {
     public void setReservation(List<Reservation> reservation) {
         this.reservation = reservation;
     }
-
-    /*public Integer getYear() {
+/*
+    public Integer getYear() {
         return year;
     }
 
     public void setYear(Integer year) {
-        this.year = year;
-    }*/
+        this.year = year;*/
+    }
     
 
     
 
     // df
 
-}
+
