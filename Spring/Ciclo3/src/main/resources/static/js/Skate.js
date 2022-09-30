@@ -1,5 +1,5 @@
 function InsertarInformacionSkates() {
-    $("#resultado").empty();
+    $("#resultadoSkate").empty();
     let myData = {
         name: $("#nameSkate").val(),
         description: $("#descriptionSkate").val(),
@@ -16,6 +16,7 @@ function InsertarInformacionSkates() {
         contentType: 'application/json',
         success: function (respuesta) {
             alert("Insercion exitosa");
+            console.log()
         },
         error: function (xhr, status) {
             alert('Operacion no satisfactoria' + xhr.status);
@@ -30,7 +31,7 @@ function ConsultarInformacionSkates() {
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
-            pintarRespuestaCategory(respuesta);
+            pintarRespuestaSkates(respuesta);
         },
         error: function (xhr, status) {
             alert('Operacion no satisfactoria' + xhr.status);
@@ -39,7 +40,7 @@ function ConsultarInformacionSkates() {
 }
 
 function pintarRespuestaSkates(items) {
-    $("#resultado").empty();
+    $("#resultadoSkate").empty();
     let myTable = "<table border='1'>";
     myTable += "<caption> SKATE </caption>";
     myTable += "<tr><th>CODE</th> <th> NAME</th> <th> BRAND</th> <th> YEAR</th>  <th> DESCRIPTION</th>  <th> CODE CATEGORY</th>  <th> NAME CATEGORY</th>  <th> DESCRIPTION CATEGORY</th>  <th> MESSAGE</th>  <th> RESERVATION</th> </th>";
@@ -59,5 +60,5 @@ function pintarRespuestaSkates(items) {
         myTable += "</tr>";
     }
     myTable += "</table>";
-    $("#resultadoCliente").append(myTable);
+    $("#resultadoSkate").append(myTable);
 }
