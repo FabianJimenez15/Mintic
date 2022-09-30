@@ -27,7 +27,7 @@ public class ClientController {
     @Autowired
     private ClientService clientService;
 
-    @GetMapping("/all") // http://localhost:8080/api/cliente/clientecompleta
+    @GetMapping("/all") // http://localhost:8080/api/cliente/all
     public List<Client> obtenerClientCompleta() {
         return clientService.obtenerClientCompleta();
     }
@@ -38,7 +38,7 @@ public class ClientController {
     }
     
         
-    @PostMapping("/save") // http://localhost:8080/api/cliente/salvarcliente
+    @PostMapping("/save") 
     @ResponseStatus(HttpStatus.CREATED)
     public Client salvarClient(@RequestBody Client client) {
         return clientService.salvarClient(client);
