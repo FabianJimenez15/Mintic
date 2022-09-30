@@ -1,5 +1,5 @@
 function InsertarInformacionCategory() {
-    $("#resultado").empty();
+    $("#resultadoCategory").empty();
     let myData = {
         name: $("#nameCategory").val(),
         description: $("#descriptionCategory").val(),
@@ -13,6 +13,7 @@ function InsertarInformacionCategory() {
         contentType: 'application/json',
         success: function (respuesta) {
             alert("Insercion exitosa");
+            console.log();
         },
         error: function (xhr, status) {
             alert('Operacion no satisfactoria' + xhr.status);
@@ -37,7 +38,7 @@ function ConsultarInformacionCategory() {
 }
 
 function pintarRespuestaCategory(items) {
-    $("#resultado").empty();
+    $("#resultadoCategory").empty();
     let myTable = "<table border='1'>";
     myTable += "<caption> SKATE </caption>";
     myTable += "<tr><th>CODE</th> <th> NAME</th></th>";
@@ -50,5 +51,5 @@ function pintarRespuestaCategory(items) {
         myTable += "</tr>";
     }
     myTable += "</table>";
-    $("#resultado").append(myTable);
+    $("#resultadoCategory").append(myTable);
 }
